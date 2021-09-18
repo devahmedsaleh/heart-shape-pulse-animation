@@ -12,7 +12,34 @@
     top: 50%;
     left: 50%;
 
-    transform: rotate(var(--rotation-angle));
+    animation: pulse 1s linear infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: rotate(var(--rotation-angle)) scale(1);
+    }
+    10% {
+        transform: rotate(var(--rotation-angle)) scale(1.1);
+    }
+    20% {
+        transform:  rotate(var(--rotation-angle)) scale(0.9);
+    }
+    30% {
+        transform:  rotate(var(--rotation-angle)) scale(1.2);
+    }
+    40% {
+        transform:  rotate(var(--rotation-angle)) scale(0.9);
+    }
+    50% {
+        transform:  rotate(var(--rotation-angle)) scale(1.05);
+    }
+    60% {
+        transform:  rotate(var(--rotation-angle)) scale(0.95);
+    }
+    100% {
+        transform:  rotate(var(--rotation-angle)) scale(1);
+    }
 }
 
 .heart::before {
